@@ -15,6 +15,7 @@ jobs:
   main_job:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
       - run: echo "TRIGGERED the main branch workflow - event based"
       - name: Use reusable  workflow
         uses: ./.github/workflows/reuseme.yml
